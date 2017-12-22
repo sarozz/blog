@@ -1,0 +1,20 @@
+<div class="container">
+<% @articles.each do |a| %>
+
+<h1 class="h2 text-center"><%= a.title %></h1><br/>
+<br>
+<div class="container">
+<%= sanitize a.description %> <br/> <%= link_to "Read More", a, class: "btn btn-primary btn-xs" %>
+</div>
+<br>
+<hr>
+<% end %>
+<br/>
+<%= link_to "New Post", new_article_path %>
+
+</div>
+
+<style>
+.fa{
+	color: #337ab7;
+}

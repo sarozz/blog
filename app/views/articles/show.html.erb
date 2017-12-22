@@ -1,0 +1,12 @@
+<div class="container">
+<hr>
+<center> <h2>Blog</h2></center>
+<h1 class="h2 text-center"><%= @article.title %></h1><br/><hr>
+<%= sanitize @article.description %>
+
+<%= link_to "Edit article", edit_article_path %>
+<br>
+
+<%= link_to "Delete", article_path(@article), method: :delete %>
+
+</div>
